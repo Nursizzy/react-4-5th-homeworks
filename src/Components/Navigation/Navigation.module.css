@@ -1,0 +1,150 @@
+ul {
+  padding: 0;
+}
+
+.navBar {
+  z-index: 10;
+  position: sticky;
+  font-weight: 700;
+  top: 0;
+  min-height: 80px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #20232a;
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.07' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+  overflow: hidden;
+  text-transform: uppercase;
+  /* border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px; */
+}
+
+.homeContainer {
+  display: flex;
+  padding-left: 2rem;
+  min-width: 380px;
+}
+
+.homeContainer ul li {
+  padding: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: whitesmoke;
+}
+
+.logoText {
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 19px;
+}
+
+.navigation {
+  text-decoration: none;
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  min-width: 380px;
+  justify-content: flex-end;
+}
+
+ul li {
+  list-style: none;
+  display: inline-block;
+  font-size: 19px;
+}
+ul li a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+.appLogo {
+  pointer-events: none;
+  width: 80px;
+  padding: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .appLogo {
+    animation: appLogo-spin infinite 20s linear;
+  }
+}
+
+@keyframes appLogo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.authorization {
+  display: flex;
+}
+
+.authorization ul li {
+  padding: 1rem;
+}
+
+.loginBtn {
+  padding: 1rem 2rem;
+}
+.modalContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20%;
+  height: 20%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  background-color: #20232a;
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.07' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+  border: 1px solid whitesmoke;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+  overflow: hidden;
+}
+
+i {
+  cursor: pointer;
+}
+
+.cartLenght {
+  padding-left: 9px;
+  padding-right: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+  font-size: 12px;
+  background: #8dc891;
+  color: #20232a;
+  padding: 0 5px;
+  vertical-align: top;
+  margin-left: -10px;
+}
+
+.cartBrief {
+  font-size: 12px;
+  font-style: italic;
+  margin-right: 10px;
+}
+
+ul li a:hover {
+  filter: brightness(120%);
+}

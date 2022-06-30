@@ -1,25 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import 'react-toastify/dist/ReactToastify.css';
 
-function App() {
+import { ToastContainer } from 'react-toastify';
+import { Navigation } from './Components/Navigation/Navigation';
+// React router
+import { Route, Routes } from 'react-router-dom';
+import { About } from './Components/About/About';
+import { Cart } from './Components/Cart/Cart';
+import { Home } from './Components/Home/Home';
+import React from 'react';
+import { ProductPage } from './Components/ProductPage/ProductPage';
+import { PageNotFound } from './Components/404/PageNotFound';
+
+export function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ToastContainer />
+      <Routes>
+        <Route path='/' element={<Navigation />}>
+          <Route index element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/cart' element={<Cart />} />
+          <Route path='/products/:productId' element={<ProductPage />} />
+          <Route path='*' element={<PageNotFound />} />
+        </Route>
+      </Routes>
+    </>
   );
 }
-
-export default App;
